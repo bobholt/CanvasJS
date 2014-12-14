@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>Cee.js arcTo Demo</title>
+    </head>
+    <body>
+      <canvas id="demo" height="500" width="960">
+      </canvas>
+
+<script src="../Cee.min.js"></script>
+<script>
+(function(){
+  "use strict"
+  function init(){
+    var ctx = new Cee("demo");
+    ctx.lineWidth(2);
+    for ( var i = 0; i < 100; i++ ){
+      var x = ctx.width/2,
+          y = 5 * i ,
+          radius = i * 10,
+          startAngle = 0,
+          endAngle = 10; 
+      ctx.beginPath()
+         .arc(x, y, radius, startAngle, endAngle, false)
+         .randomStroke()
+         .stroke()
+         .closePath()
+    }
+  }
+return {
+  init : init
+}})().init();
+
+
+
+</script>
+    </body>
+</html>
