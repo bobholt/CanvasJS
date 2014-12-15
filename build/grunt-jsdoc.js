@@ -8,12 +8,6 @@ module.exports = function(grunt) {
         destination: "docs"
       }
     },
-    ghpages: {
-      src: ["src/*.js"],
-      options: {
-        destination: "gh-pages/docs"
-      }
-    }
   });
 
   grunt.loadNpmTasks("grunt-jsdoc");
